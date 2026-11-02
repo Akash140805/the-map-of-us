@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#ffb8d2" name="theme-color"/>
+  <title>
+   A Little World for You ♡
+  </title>
+  <link href="css/styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="sky">
+  </div>
+  <header class="wrap topbar">
+   <div class="brand">
+    ✦ a little world for you
+   </div>
+   <div class="top-actions">
+    <button class="pill" id="mapBtn">
+     🗺 Our map
+    </button>
+    <button aria-pressed="false" class="pill" id="musicToggle">
+     ♫ Music off
+    </button>
+   </div>
+  </header>
+  <main class="wrap">
+   <section class="hero" id="home">
+    <div class="hero-card">
+     <div class="moon">
+      🌙
+     </div>
+     <div class="eyebrow">
+      A tiny universe, made with love
+     </div>
+     <h1>
+      A Little World
+      <br/>
+      <em>
+       for My Favorite Person ♡
+      </em>
+     </h1>
+     <p>
+      Wander through our memories, collect pieces of my heart, and discover the words I saved for last.
+     </p>
+     <button class="primary" id="beginBtn">
+      Step into our world ✨
+     </button>
+     <div class="tiny">
+      <!-- A little music, a little magic, and all my love. -->
+     </div>
+    </div>
+   </section>
+   <section class="section" id="world">
+    <div class="section-head">
+     <div class="eyebrow">
+      Your storybook map
+     </div>
+     <h2>
+      Choose your next little adventure
+     </h2>
+     <p>
+      Each place holds a chapter of us. Explore in order &mdash; every stop brings you closer to the final letter. ♡
+     </p>
+    </div>
+    <div class="map-shell">
+     <div class="map-title">
+      <strong>
+       ♡ The map of us
+      </strong>
+      <span class="progress" id="progress">
+       0 / 6 places discovered
+      </span>
+     </div>
+     <div class="storybook-map">
+      <svg aria-hidden="true" class="map-art" preserveaspectratio="none" viewbox="0 0 900 480">
+       <path class="map-path" d="M130 100 C210 40 280 130 410 90 S610 90 720 150 S700 300 620 345 S420 400 300 365 S100 300 130 100">
+       </path>
+       <g fill="#fff" opacity=".9">
+        <circle cx="100" cy="70" r="4">
+        </circle>
+        <circle cx="340" cy="45" r="3">
+        </circle>
+        <circle cx="810" cy="90" r="5">
+        </circle>
+        <circle cx="820" cy="350" r="3">
+        </circle>
+        <circle cx="120" cy="400" r="4">
+        </circle>
+       </g>
+       <g fill="#f9a7cb" opacity=".6">
+        <circle cx="190" cy="230" r="35">
+        </circle>
+        <circle cx="480" cy="230" r="22">
+        </circle>
+        <circle cx="730" cy="400" r="28">
+        </circle>
+       </g>
+      </svg>
+      <button class="island i1" data-scene="memories">
+       <span class="ico">
+        🌸
+       </span>
+       <b>
+        Memory Garden
+       </b>
+       <small>
+        Where our story blooms
+       </small>
+      </button>
+      <button class="island i2 locked" data-scene="game" disabled="">
+       <span class="ico">
+        💗
+       </span>
+       <b>
+        Heartwood Trail
+       </b>
+       <small>
+        Collect the little hearts
+       </small>
+      </button>
+      <button class="island i3 locked" data-scene="future" disabled="">
+       <span class="ico">
+        🌙
+       </span>
+       <b>
+        Our Somewhere
+       </b>
+       <small>
+        Dreams for tomorrow
+       </small>
+      </button>
+      <button class="island i4 locked" data-scene="letter" disabled="">
+       <span class="ico">
+        💌
+       </span>
+       <b>
+        Voice Letter
+       </b>
+       <small>
+        Hear every word from my heart
+       </small>
+      </button>
+      <button class="island i5 locked" data-scene="ending" disabled="">
+       <span class="ico">
+        🎆
+       </span>
+       <b>
+        Forever Sky
+       </b>
+       <small>
+        Our little finale
+       </small>
+      </button>
+     </div>
+     <p class="map-note">
+      The next place glows when you're ready for it ✨
+     </p>
+    </div>
+   </section>
+   <section class="scene" id="scene-memories">
+    <div class="scene-panel">
+     <div class="scene-top">
+      <div>
+       <div class="eyebrow">
+        Chapter one &middot; where it began
+       </div>
+       <h2>
+        Memory Garden 🌸
+       </h2>
+      </div>
+      <button class="back" data-map="">
+       &larr; Back to map
+      </button>
+     </div>
+     <div class="memory-stage">
+      <div class="polaroid">
+       <div class="photo" id="memoryArt">
+        🌷
+       </div>
+       <p id="memoryCaption">
+        The beginning of something beautiful ♡
+       </p>
+      </div>
+      <div class="copy">
+       <h3 id="memoryTitle">
+        The day our world got brighter
+       </h3>
+       <p id="memoryText">
+        It was just a normal day last year in June until evening, when one text paved the way 
+        for the happiest moments of my life.  The day we talked for the first time, not knowing 
+        that I had met the love of my life, we talked about telling each other a little bit 
+        about ourselves. Now, when I look back at that day, I see how far we have come together 
+        and still have a forever to go with you.
+       </p>
+       <div class="controls">
+        <button aria-label="Previous memory" class="round" id="prevMemory">
+         &larr;
+        </button>
+        <span id="memoryCounter">
+         01 / 04
+        </span>
+        <button class="round" id="nextMemory">
+         &rarr;
+        </button>
+       </div>
+       <button class="primary" id="finishMemories">
+        Follow the heart trail &rarr;
+       </button>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="scene" id="scene-game">
+    <div class="scene-panel">
+     <div class="scene-top">
+      <div>
+       <div class="eyebrow">
+        Chapter two &middot; a tiny adventure
+       </div>
+       <h2>
+        Heartwood Trail 💗
+       </h2>
+      </div>
+      <button class="back" data-map="">
+       &larr; Back to map
+      </button>
+     </div>
+     <div class="game-intro">
+      <p>
+       Help the little girl walk along the garden path and hop over little gaps to collect every heart. Move with
+       <b>
+        &larr; &rarr;
+       </b>
+       or
+       <b>
+        A / D
+       </b>
+       , jump with
+       <b>
+        Space
+       </b>
+       , or use the buttons below on a phone. The exit opens when you've found all 8 hearts.
+      </p>
+      <div class="game-stats" id="score">
+       ♡ 0 / 8 hearts
+      </div>
+     </div>
+     <div class="game-wrap">
+      <canvas aria-label="Platform adventure game. Move the girl and collect hearts." height="480" id="gameCanvas" width="900">
+      </canvas>
+     </div>
+     <div class="game-hint">
+      Tip: take it slowly. Short hops are enough to cross the gaps and reach the hearts.
+     </div>
+     <div class="touch-controls">
+      <button aria-label="Move left" data-key="left">
+       &larr;
+      </button>
+      <button class="jump" data-key="jump">
+       ♡ Jump
+      </button>
+      <button aria-label="Move right" data-key="right">
+       &rarr;
+      </button>
+     </div>
+     <div aria-live="polite" class="game-msg" id="gameMessage">
+      Ready, little adventurer? Let's find some hearts. ♡
+     </div>
+     <div style="text-align:center">
+      <button class="pill" id="resetGame">
+       Restart adventure &orarr;
+      </button>
+      <button class="primary hidden" id="finishGame">
+       Unlock the next place &rarr;
+      </button>
+     </div>
+    </div>
+   </section>
+   <section class="scene" id="scene-future">
+    <div class="scene-panel">
+     <div class="scene-top">
+      <div>
+       <div class="eyebrow">
+        Chapter three &middot; all the tomorrows
+       </div>
+       <h2>
+        Our Somewhere 🌙
+       </h2>
+      </div>
+      <button class="back" data-map="">
+       &larr; Back to map
+      </button>
+     </div>
+     <p style="line-height:1.9;color:#80637e">
+      I don't need every tomorrow figured out. I just love the thought of finding our way through them together.
+     </p>
+     <div class="map" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px">
+      <div class="island" style="position:relative;transform:none;width:auto">
+       <span class="ico">
+        🏡
+       </span>
+       <b>
+        A place of our own
+       </b>
+       <small>
+        Love, I want a place for us where it’s just us, our own little world with no interference from the world. I think of it every day: you and me living in a quiet place, away from chaos, where there is less noise and no one to disturb us and one day I will make this dream true for us.
+       </small>
+      </div>
+      <div class="island" style="position:relative;transform:none;width:auto">
+       <span class="ico">
+        🚆
+       </span>
+       <b>
+        Places we'll go
+       </b>
+       <small>
+        There are a lot of places on our bucket list, starting with exploring our countries, then Disney and Amsterdam. I want to take you to every place you have mentioned, especially to the castles where you can wear the princess dress and go on exploring the castle, carry you inside the castle and make you feel like a princess. So many dreams that I want to fulfil, and I will try my best to make each one true and make you happy.
+       </small>
+      </div>
+      <div class="island" style="position:relative;transform:none;width:auto">
+       <span class="ico">
+        ☕
+       </span>
+       <b>
+        Ordinary days
+       </b>
+       <small>
+        I keep imagining the days when there will be no distance, and we will live together. Starting my morning by looking at your pretty face, eating together, playing games together, going for shopping, teasing each other, and growing together. I don’t have words to express how much I want to be with you. When we meet, maybe I will just hug you for a long time, not willing to let you go. Each day is so long to spend without you by my side. I hope this  distance ends soon and I don’t have to live away from you ever.
+       </small>
+      </div>
+     </div>
+     <div style="text-align:center;margin-top:24px">
+      <button class="primary" id="finishFuture">
+       There's one last thing 💌
+      </button>
+     </div>
+    </div>
+   </section>
+   <section class="scene" id="scene-letter">
+    <div class="scene-panel">
+     <div class="scene-top">
+      <div>
+       <div class="eyebrow">
+        Chapter four &middot; read in my own voice
+       </div>
+       <h2>
+        The Voice Letter 💌
+       </h2>
+      </div>
+      <button class="back" data-map="">
+       &larr; Back to map
+      </button>
+     </div>
+     <p class="voice-letter-intro">
+      <!-- I wanted you to hear these words exactly as I mean them. Press play, and let me read this letter to you. ♡ -->
+     </p>
+     <div class="voice-letter-controls">
+      <button class="primary" id="letterPlay" disabled>▶ Play my letter</button>
+      <button class="pill" id="letterReplay" disabled>↻ Replay</button>
+      <span id="letterAudioStatus" class="voice-status" aria-live="polite">A little note is waiting to be added by the creator. ♡</span>
+     </div>
+     <div class="voice-progress" aria-hidden="true"><span id="letterProgress"></span></div>
+     <article class="letter">
+      <div class="to">
+       Dear love, ♡
+      </div>
+      <p>
+       Happy 14th Monthsary.
+      </p>
+      <p>
+       Today we celebrate our monthsary, a day that holds a special place in my heart. 
+       14 months ago, on this very day, I was blessed to be your man, and ever since, life has 
+       been more beautiful and meaningful. You have given me a reason to smile more, work 
+       harder and have faith in a happy future where we live together.
+      </p>
+      <p>
+        I don’t always have the perfect words to describe how much you mean to me or how you 
+        make everything better just by being part of my life. Every day starts with a smile 
+        because my morning starts with your texts and spending time with you; every night I 
+        sleep with the memories of our day spent together and thinking about the day when I 
+        will finally be beside you.
+
+      </p>
+      <p>
+       Each moment, from playing ludo, teasing each other, gossiping about the incidents 
+       happening in our life, and planning our future, holds a special place in my heart.
+
+      </p>
+      <p> Thank you for being part of my days, for all the memories we have made together and all 
+        the things you do for me. I hope I am able to make you smile and make you feel cared 
+        for.
+      </p>
+      <p> Although there are things that I am unable to do for you right now, and it hurts 
+        me, I am always here for you in all your battles and there’s no one more I want to be 
+        with me when I become the man I want to be. I want to achieve all with you, be with 
+        you when you fulfil your dreams and build a life together.
+      </p>
+      <p>Whatever the next chapter looks like, I pray we keep choosing each other and making 
+        it ours together.
+      </p>
+      <p>
+       I love you ❤️ 
+      </p>
+      <div class="sign">
+       Yours, always ♡
+      </div>
+     </article>
+     <!-- <p class="voice-sync-note" id="voiceSyncNote">Your words will appear as your recording plays. The sentence timing is estimated from the recording length.</p> -->
+     <div style="text-align:center;margin-top:24px">
+      <button class="primary" id="finishLetter">
+       Open the forever sky ✨
+      </button>
+     </div>
+    </div>
+   </section>
+   <section class="scene" id="scene-ending">
+    <div class="scene-panel finale">
+     <div aria-hidden="true" class="finale-decor">
+      <span>
+       ♡
+      </span>
+      <span>
+       ✿
+      </span>
+      <span>
+       ♡
+      </span>
+      <span>
+       ✧
+      </span>
+      <span>
+       🌸
+      </span>
+      <span>
+       ♡
+      </span>
+      <span>
+       ✿
+      </span>
+      <span>
+       ♡
+      </span>
+      <span>
+       ✧
+      </span>
+     </div>
+     <div class="eyebrow">
+      And our story keeps going
+     </div>
+     <div class="heart">
+      ♡
+     </div>
+     <h2>
+      Happy Monthsary,
+      <br/>
+       Love
+     </h2>
+     <p>
+      Thank you for being part of my story.
+      <br/>
+      I'd choose you in every lifetime. ✨
+     </p>
+     <!-- <p>
+      Same sky, same stars, same us. Always. ♡
+     </p> -->
+     <button class="primary" id="replay">
+      Wander our world again &nearrow;
+     </button>
+    </div>
+   </section>
+  </main>
+  <footer>
+   I love you ♡
+  </footer>
+  <div class="toast" id="toast" role="status">
+  </div>
+  <script defer="" src="js/content.js">
+  </script>
+  <script defer="" src="js/main.js">
+  </script>
+  <script defer="" src="js/voice-letter.js">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,2 @@
+Place your four photos here as memory-01.jpg through memory-04.jpg.
+Edit their captions, titles, descriptions, and paths in ../js/content.js.

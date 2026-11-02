@@ -1,0 +1,1018 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+:root {
+  --pink:#ff8fbd;
+  --pink2:#ffc2da;
+  --blush:#ffe6ef;
+  --cream:#fff8f4;
+  --berry:#8c4169;
+  --plum:#57365e;
+  --lav:#c8b7f5;
+  --lav2:#eee7ff;
+  --gold:#ffd98c;
+  --ink:#50334e;
+  --glass:#fff9f4d9;
+  --shadow:0 18px 50px #a34d7a1c
+}
+* {
+  box-sizing:border-box
+}
+html {
+  scroll-behavior:smooth
+}
+body {
+  margin:0;
+  min-height:100vh;
+  font-family:'DM Sans',sans-serif;
+  color:var(--ink);
+  background:radial-gradient(ellipse at 15% 5%,#fff 0,transparent 32%),radial-gradient(ellipse at 85% 30%,#f5eaff 0,transparent 34%),linear-gradient(145deg,#fff5f8,#ffe1ed 48%,#f4eaff);
+  overflow-x:hidden
+}
+button {
+  font:inherit;
+  cursor:pointer
+}
+button:focus-visible {
+  outline:3px solid var(--berry);
+  outline-offset:3px
+}
+.sky {
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  background-image:radial-gradient(2px 2px at 30px 50px,#fff 50%,transparent 55%),radial-gradient(2px 2px at 170px 130px,#ff9fc8 50%,transparent 55%),radial-gradient(1px 1px at 90px 180px,#a99be7 50%,transparent 55%);
+  background-size:230px 210px;
+  opacity:.58
+}
+.wrap {
+  width:min(1080px,92%);
+  margin:auto
+}
+.topbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:17px 0;
+  gap:12px
+}
+.brand {
+  font-size:.76rem;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--berry);
+  font-weight:700
+}
+.top-actions {
+  display:flex;
+  gap:8px
+}
+.pill {
+  border:1px solid #e7a8c5;
+  background:#fff9f5d9;
+  color:var(--berry);
+  padding:10px 14px;
+  border-radius:999px;
+  box-shadow:0 5px 16px #a34d7a10
+}
+.hero {
+  min-height:82vh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  position:relative;
+  padding:45px 0 70px
+}
+.hero-card {
+  max-width:780px;
+  padding:clamp(24px,5vw,55px);
+  border:1px solid #fff;
+  border-radius:38px;
+  background:linear-gradient(145deg,#ffffffc9,#fff0f7a8);
+  box-shadow:0 30px 90px #b35e8b22;
+  backdrop-filter:blur(12px);
+  position:relative;
+  overflow:hidden
+}
+.hero-card:before {
+  content:'✦';
+  position:absolute;
+  top:18px;
+  right:28px;
+  color:#d6a7e7;
+  font-size:2rem;
+  opacity:.82;
+  animation:starDrift 12s ease-in-out infinite
+}
+.moon {
+  font-size:3.4rem;
+  filter:drop-shadow(0 0 16px #f8b3d9);
+  margin-bottom:4px
+}
+.eyebrow {
+  font-size:.72rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:#b15c89;
+  font-weight:700
+}
+.hero h1 {
+  font:400 clamp(3rem,8vw,6.6rem)/.98 'Playfair Display',serif;
+  color:var(--plum);
+  margin:20px 0
+}
+.hero h1 em {
+  color:#e76da6;
+  font-weight:400
+}
+.hero p {
+  max-width:560px;
+  line-height:1.85;
+  margin:0 auto 26px;
+  color:#795c7b
+}
+.primary {
+  border:0;
+  border-radius:999px;
+  padding:14px 24px;
+  color:#fff;
+  background:linear-gradient(110deg,#ed78aa,#bd8be5);
+  box-shadow:0 10px 28px #dc79ad45;
+  transition:.2s
+}
+.primary:hover {
+  transform:translateY(-2px);
+  box-shadow:0 14px 32px #dc79ad65
+}
+.tiny {
+  font-size:.78rem;
+  color:#a17b9a;
+  margin-top:14px
+}
+.section {
+  padding:28px 0 55px
+}
+.section-head {
+  text-align:center;
+  margin-bottom:24px
+}
+.section-head h2 {
+  font:400 clamp(2.1rem,5vw,3.4rem) 'Playfair Display',serif;
+  color:var(--plum);
+  margin:8px 0
+}
+.section-head p {
+  color:#896b8a;
+  line-height:1.7;
+  max-width:590px;
+  margin:auto
+}
+.map-shell {
+  position:relative;
+  max-width:970px;
+  margin:auto;
+  padding:24px;
+  border:1px solid #fff;
+  border-radius:32px;
+  background:linear-gradient(150deg,#fffaf8ed,#ffeaf3e8);
+  box-shadow:var(--shadow);
+  overflow:hidden
+}
+.map-title {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:15px
+}
+.map-title strong {
+  font:500 1.5rem 'Playfair Display',serif;
+  color:var(--plum)
+}
+.progress {
+  font-size:.8rem;
+  color:#b15c89;
+  background:#ffe0ed;
+  border-radius:999px;
+  padding:8px 12px
+}
+.storybook-map {
+  min-height:440px;
+  border-radius:25px;
+  position:relative;
+  overflow:hidden;
+  background:radial-gradient(ellipse at 50% 50%,#fff9fb 0,#f8d9ed 45%,#d9c9fa 100%);
+  border:1px solid #fff
+}
+.map-art {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  opacity:.55
+}
+.map-path {
+  fill:none;
+  stroke:#fff;
+  stroke-width:8;
+  stroke-linecap:round;
+  stroke-dasharray:3 13;
+  filter:drop-shadow(0 2px 2px #b66eaa44)
+}
+.island {
+  position:absolute;
+  transform:translate(-50%,-50%);
+  width:150px;
+  min-height:100px;
+  border:2px solid #fff;
+  border-radius:25px;
+  padding:12px 8px;
+  background:linear-gradient(145deg,#fffefc,#ffe4ef);
+  color:var(--ink);
+  box-shadow:0 10px 22px #a85b8e26;
+  transition:transform .2s,box-shadow .2s;
+  z-index:2
+}
+.island:hover:not(:disabled) {
+  transform:translate(-50%,-53%) scale(1.04);
+  box-shadow:0 15px 30px #a85b8e40
+}
+.island .ico {
+  display:block;
+  font-size:1.8rem;
+  margin-bottom:4px
+}
+.island b {
+  display:block;
+  font:500 1.05rem 'Playfair Display',serif
+}
+.island small {
+  font-size:.68rem;
+  color:#9c7092
+}
+.island.locked {
+  filter:saturate(.5);
+  background:#f4e9f6;
+  color:#9e8ca6;
+  cursor:not-allowed
+}
+.island.locked:after {
+  content:'🔒';
+  position:absolute;
+  right:8px;
+  top:7px;
+  font-size:.8rem
+}
+.i1 {
+  left:17%;
+  top:24%
+}
+.i2 {
+  left:48%;
+  top:18%
+}
+.i3 {
+  left:78%;
+  top:33%
+}
+.i4 {
+  left:69%;
+  top:70%
+}
+.i5 {
+  left:38%;
+  top:79%
+}
+.i6 {
+  left:13%;
+  top:62%
+}
+.map-note {
+  font-size:.78rem;
+  text-align:center;
+  color:#9b7294;
+  margin:15px 0 0
+}
+.scene {
+  display:none;
+  padding:24px 0 55px;
+  animation:appear .45s ease
+}
+.scene.active {
+  display:block
+}
+@keyframes appear {
+  from {
+    opacity:0;
+    transform:translateY(10px)
+  }
+  to {
+    opacity:1;
+    transform:translateY(0)
+  }
+}
+.scene-panel {
+  padding:clamp(20px,4vw,38px);
+  border:1px solid #fff;
+  border-radius:30px;
+  background:linear-gradient(145deg,#fffdfb,#fff0f7);
+  box-shadow:var(--shadow)
+}
+.scene-top {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  margin-bottom:20px
+}
+.scene-top h2 {
+  font:400 clamp(2rem,5vw,3rem) 'Playfair Display',serif;
+  color:var(--plum);
+  margin:5px 0
+}
+.back {
+  border:1px solid #e7b0cd;
+  background:#fff;
+  color:var(--berry);
+  border-radius:999px;
+  padding:10px 14px;
+  white-space:nowrap
+}
+.memory-stage {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:center
+}
+.polaroid {
+  background:#fff;
+  padding:12px 12px 24px;
+  box-shadow:0 15px 35px #8e527122;
+  transform:rotate(-2deg);
+  max-width:360px;
+  margin:auto;
+  width:100%
+}
+.photo {
+  aspect-ratio:4/3;
+  display:grid;
+  place-items:center;
+  font-size:5rem;
+  background:linear-gradient(135deg,#f7c9df,#d8c8f7,#ffe8c8);
+  overflow:hidden;
+  background-size:cover;
+  background-position:center
+}
+.polaroid p {
+  text-align:center;
+  font:italic 1.25rem 'Playfair Display',serif;
+  margin:14px 0 0
+}
+.copy h3 {
+  font:400 2rem 'Playfair Display',serif;
+  color:var(--berry);
+  margin:0 0 10px
+}
+.copy p {
+  line-height:1.9;
+  color:#80637e
+}
+.controls {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:18px
+}
+.round {
+  border:1px solid #e8b5cf;
+  color:var(--berry);
+  background:#fff;
+  border-radius:50%;
+  width:40px;
+  height:40px
+}
+.upload {
+  display:inline-block;
+  border:1px solid #e7b0cd;
+  background:#fff;
+  color:var(--berry);
+  border-radius:999px;
+  padding:9px 12px;
+  font-size:.8rem
+}
+.upload input {
+  display:none
+}
+.game-intro {
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:16px;
+  align-items:center
+}
+.game-intro p {
+  line-height:1.7;
+  color:#866782
+}
+.game-stats {
+  color:#b05283;
+  font-weight:700;
+  background:#ffe3ef;
+  padding:12px 15px;
+  border-radius:18px;
+  white-space:nowrap
+}
+.game-wrap {
+  margin-top:15px;
+  border-radius:25px;
+  overflow:hidden;
+  border:2px solid #fff;
+  box-shadow:inset 0 0 0 1px #f5c1d8;
+  background:#e7d8ff;
+  position:relative
+}
+.game-wrap canvas {
+  display:block;
+  width:100%;
+  height:auto;
+  touch-action:none
+}
+.game-hint {
+  font-size:.8rem;
+  color:#9b7294;
+  text-align:center;
+  margin:12px 0
+}
+.touch-controls {
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  align-items:center
+}
+.touch-controls button {
+  width:58px;
+  height:52px;
+  border:1px solid #e7a9c7;
+  border-radius:17px;
+  background:#fff0f6;
+  color:#a64f80;
+  font-size:1.25rem;
+  box-shadow:0 5px 12px #b25c8a18;
+  touch-action:none
+}
+.touch-controls .jump {
+  width:90px;
+  background:linear-gradient(110deg,#ef83b2,#c29be9);
+  color:white
+}
+.game-msg {
+  min-height:28px;
+  text-align:center;
+  color:#a04d7d;
+  font-weight:600;
+  margin:10px 0
+}
+.audio-list {
+  display:grid;
+  gap:12px
+}
+.audio-row {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px;
+  border-radius:18px;
+  background:#fff;
+  border:1px solid #f2d2e2
+}
+.play {
+  border:0;
+  border-radius:50%;
+  width:43px;
+  height:43px;
+  background:linear-gradient(135deg,#f6a8c9,#d7b8f4);
+  color:#663e68
+}
+.audio-row strong {
+  display:block
+}
+.audio-row small {
+  display:block;
+  color:#a17b9a;
+  margin-top:4px
+}
+.audio-row input {
+  display:none
+}
+.letter {
+  max-width:780px;
+  margin:auto;
+  padding:clamp(25px,5vw,50px);
+  background:linear-gradient(145deg,#fff8ed,#ffe7ef);
+  border:1px solid #fff;
+  border-radius:8px;
+  box-shadow:0 20px 55px #a34d7a22;
+  position:relative
+}
+.letter:before {
+  content:'';
+  position:absolute;
+  inset:10px;
+  border:1px solid #e6b5c9;
+  pointer-events:none
+}
+.letter .to,.letter .sign {
+  font:italic 1.5rem 'Playfair Display',serif;
+  color:#a34d7a
+}
+.letter p {
+  font:1.12rem/1.9 'Playfair Display',serif;
+  color:#654863;
+  position:relative
+}
+.letter .sign {
+  text-align:right
+}
+.finale {
+  text-align:center;
+  padding:55px 10px
+}
+.finale .heart {
+  font-size:3.3rem;
+  color:#ec78aa;
+  animation:beat 1.4s infinite
+}
+.finale h2 {
+  font:italic 400 clamp(2.8rem,7vw,5.2rem) 'Playfair Display',serif;
+  color:#d95e9b;
+  margin:12px
+}
+.finale p {
+  line-height:1.8;
+  color:#896b8a
+}
+@keyframes beat {
+  50% {
+    transform:scale(1.15)
+  }
+}
+@keyframes float {
+  50% {
+    transform:translateY(-9px) rotate(8deg)
+  }
+}
+footer {
+  text-align:center;
+  padding:24px;
+  color:#ae85a3;
+  font-size:.78rem
+}
+.toast {
+  position:fixed;
+  bottom:18px;
+  left:50%;
+  transform:translate(-50%,20px);
+  opacity:0;
+  pointer-events:none;
+  background:#fff;
+  color:#8b416a;
+  border:1px solid #f1c5d9;
+  border-radius:999px;
+  padding:12px 18px;
+  z-index:9;
+  transition:.25s;
+  box-shadow:var(--shadow);
+  max-width:90%;
+  text-align:center
+}
+.toast.show {
+  opacity:1;
+  transform:translate(-50%,0)
+}
+.hidden {
+  display:none!important
+}
+@media(max-width:650px) {
+  .hero {
+    min-height:75vh
+  }
+  .map-shell {
+    padding:12px
+  }
+  .storybook-map {
+    min-height:540px
+  }
+  .island {
+    width:125px;
+    min-height:90px;
+    padding:9px 5px
+  }
+  .island b {
+    font-size:.93rem
+  }
+  .i1 {
+    left:24%;
+    top:15%
+  }
+  .i2 {
+    left:72%;
+    top:28%
+  }
+  .i3 {
+    left:70%;
+    top:51%
+  }
+  .i4 {
+    left:50%;
+    top:78%
+  }
+  .i5 {
+    left:20%;
+    top:73%
+  }
+  .i6 {
+    left:28%;
+    top:44%
+  }
+  .memory-stage {
+    grid-template-columns:1fr
+  }
+  .polaroid {
+    max-width:290px
+  }
+  .game-intro {
+    grid-template-columns:1fr
+  }
+  .game-stats {
+    justify-self:start
+  }
+  .scene-top {
+    align-items:flex-start
+  }
+  .scene-top h2 {
+    font-size:2rem
+  }
+  .topbar {
+    align-items:flex-start
+  }
+  .brand {
+    padding-top:8px;
+    font-size:.65rem
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*:before,*:after {
+    animation-duration:.01ms!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important
+  }
+}
+/* Romantic evening atmosphere refresh */
+body {
+  background:radial-gradient(ellipse at 50% 0%,#fff0d9 0,transparent 30%),linear-gradient(160deg,#f5a9c8 0%,#f8c0c5 34%,#e9bce0 68%,#cbb8eb 100%);
+}
+.sky {
+  opacity:.62;
+  background-image:radial-gradient(2px 2px at 30px 50px,#fff8e8 50%,transparent 55%),radial-gradient(2px 2px at 170px 130px,#fff 50%,transparent 55%),radial-gradient(1px 1px at 90px 180px,#ffe4a8 50%,transparent 55%);
+}
+.hero-card {
+  background:linear-gradient(145deg,#fffaf1e8,#ffe5f1df);
+  border-color:#fff8f5;
+}
+.hero h1 {
+  color:#794766
+}
+.hero h1 em {
+  color:#df5f9d
+}
+.primary {
+  background:linear-gradient(110deg,#ee75a9,#d28bd0);
+}
+.map-shell,.scene-panel {
+  background:linear-gradient(145deg,#fffaf5f2,#ffeaf3ed);
+}
+.storybook-map {
+  background:radial-gradient(ellipse at 72% 18%,#fff1d1 0,#f8c7d8 35%,#e7c4ed 72%,#c9b8e9 100%);
+}
+.game-wrap {
+  background:#f3bfd1;
+}
+.game-wrap canvas {
+  width:100%;
+  height:auto;
+  display:block;
+  aspect-ratio:15/8;
+}
+button:disabled {
+  opacity:.78
+}
+@media(max-width:650px) {
+  .game-wrap canvas {
+    min-height:220px;
+    object-fit:contain
+  }
+  .touch-controls {
+    gap:12px
+  }
+  .touch-controls button {
+    width:64px;
+    height:58px
+  }
+}
+/* Heartwood Trail: separate stepping-stone islands with real gaps */
+.game-wrap {
+  background:linear-gradient(180deg,#f4a8c4,#f8c4bd 52%,#d9b9e8)
+}
+.game-hint {
+  color:#965d88
+}
+/* One intimate voice message */
+.single-voice {
+  max-width:680px;
+  margin:18px auto;
+  padding:20px 22px;
+  background:linear-gradient(120deg,#fff8fb,#ffe7f0);
+  border-color:#f1c4d9;
+  box-shadow:0 10px 28px #b65f8b12
+}
+.single-voice .play {
+  flex:0 0 48px;
+  width:48px;
+  height:48px;
+  font-size:1.05rem
+}
+/* Gentle celebration in Forever Sky */
+.finale {
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  background:radial-gradient(ellipse at 50% 0%,#fff4d9 0,transparent 42%),linear-gradient(145deg,#fffaf7,#ffe5f0 58%,#f0e4fb)
+}
+.finale-decor {
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  color:#e78bb4;
+  opacity:.34
+}
+.finale-decor span {
+  position:absolute;
+  display:block;
+  animation:petal-drift 14s ease-in-out infinite;
+  will-change:transform
+}
+.finale-decor span:nth-child(1) {
+  left:9%;
+  top:18%;
+  font-size:2rem
+}
+.finale-decor span:nth-child(2) {
+  left:20%;
+  top:72%;
+  font-size:2.3rem;
+  color:#d99bc9;
+  animation-delay:-2s
+}
+.finale-decor span:nth-child(3) {
+  right:12%;
+  top:22%;
+  font-size:2.5rem;
+  animation-delay:-3s
+}
+.finale-decor span:nth-child(4) {
+  right:23%;
+  top:72%;
+  font-size:1.5rem;
+  color:#d9a5df;
+  animation-delay:-1s
+}
+.finale-decor span:nth-child(5) {
+  left:5%;
+  top:48%;
+  font-size:1.4rem;
+  animation-delay:-4s
+}
+.finale-decor span:nth-child(6) {
+  right:6%;
+  top:54%;
+  font-size:1.8rem;
+  animation-delay:-2.5s
+}
+.finale-decor span:nth-child(7) {
+  left:34%;
+  top:10%;
+  font-size:1.2rem;
+  animation-delay:-5s
+}
+.finale-decor span:nth-child(8) {
+  right:35%;
+  bottom:9%;
+  font-size:1.5rem;
+  animation-delay:-1.5s
+}
+.finale-decor span:nth-child(9) {
+  left:13%;
+  bottom:12%;
+  font-size:1.2rem;
+  animation-delay:-3.5s
+}
+@keyframes petal-drift {
+  0%,100% {
+    transform:translate3d(0,0,0) rotate(-5deg)
+  }
+  50% {
+    transform:translate3d(0,-7px,0) rotate(5deg)
+  }
+}
+@keyframes starDrift {
+  0%,100% {
+    transform:translate3d(0,0,0) rotate(0deg)
+  }
+  50% {
+    transform:translate3d(0,-4px,0) rotate(4deg)
+  }
+}
+.finale>*:not(.finale-decor) {
+  position:relative;
+  z-index:1
+}
+@media(prefers-reduced-motion:reduce) {
+  .sky,.hero-card:before,.finale-decor span,.finale .heart {
+    animation:none!important
+  }
+}
+@media(max-width:600px) {
+  .finale-decor span:nth-child(2),.finale-decor span:nth-child(4),.finale-decor span:nth-child(7) {
+    display:none
+  }
+  .single-voice {
+    padding:14px
+  }
+}
+
+
+/* Voice Letter — keeps the existing storybook look and adds a calm read-along. */
+.voice-letter-intro {
+  max-width: 720px;
+  margin: 0 auto 18px;
+  color: #866782;
+  line-height: 1.8;
+  text-align: center;
+}
+.voice-letter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 14px;
+}
+.voice-letter-controls .primary,
+.voice-letter-controls .pill {
+  margin: 0;
+}
+.voice-upload {
+  cursor: pointer;
+}
+.voice-status {
+  flex-basis: 100%;
+  min-height: 1.3em;
+  color: #a17b9a;
+  font-size: .82rem;
+  text-align: center;
+}
+.voice-progress {
+  width: min(100%, 780px);
+  height: 5px;
+  margin: 0 auto 18px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #f3d5e4;
+}
+.voice-progress span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ed8bb5, #c99cdb);
+  transition: width .18s linear;
+}
+.letter .narration-sentence {
+  opacity: .58;
+  border-radius: 4px;
+  transition: opacity .25s ease, background-color .25s ease, box-shadow .25s ease;
+}
+.letter .narration-sentence.is-revealed {
+  opacity: 1;
+}
+.letter .narration-sentence.is-current {
+  background: #fce0ec;
+  box-shadow: 0 0 0 3px #fce0ec;
+  color: #8b416a;
+}
+.voice-sync-note {
+  margin: 14px auto 0;
+  color: #a17b9a;
+  font-size: .78rem;
+  line-height: 1.6;
+  text-align: center;
+}
+.voice-letter-controls button:disabled {
+  cursor: not-allowed;
+  opacity: .45;
+}
+@media (max-width: 600px) {
+  .voice-letter-controls {
+    gap: 8px;
+  }
+  .voice-letter-controls .primary,
+  .voice-letter-controls .pill,
+  .voice-upload {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* Heartwood Trail: gentler movement and a walkable garden path. */
+.game-hint {
+  max-width: 620px;
+  margin: 12px auto;
+  line-height: 1.6;
+}
+.game-wrap canvas {
+  max-height: 480px;
+}
+.touch-controls button {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Forever Sky: a visible but delicate shower of drifting blossoms. */
+.finale-decor .falling-petal {
+  top: -9%;
+  z-index: 0;
+  opacity: .68;
+  line-height: 1;
+  animation-name: blossom-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: top, transform;
+  filter: drop-shadow(0 2px 3px #e99abc30);
+}
+@keyframes blossom-fall {
+  0% {
+    top: -9%;
+    transform: translate3d(0,0,0) rotate(0deg);
+  }
+  25% {
+    transform: translate3d(var(--sway),0,0) rotate(85deg);
+  }
+  60% {
+    transform: translate3d(calc(var(--sway) * -0.55),0,0) rotate(210deg);
+  }
+  100% {
+    top: 108%;
+    transform: translate3d(var(--sway),0,0) rotate(360deg);
+  }
+}
+/* Keep the finale petals visible even when the visitor prefers reduced motion.
+   In that mode, use a slower, gentler fall instead of removing the effect. */
+@media (prefers-reduced-motion: reduce) {
+  .finale-decor .falling-petal {
+    display: block !important;
+    animation-duration: 28s !important;
+    opacity: .48;
+  }
+}
+
+.photo img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Reliable falling-petal layer for Forever Sky */
+.finale-decor .falling-petal {
+  position: absolute;
+  display: block;
+  top: -10%;
+  z-index: 0;
+  pointer-events: none;
+  animation: blossom-fall 16s linear infinite;
+}
+
+
+/* FINAL FIX: Keep Forever Sky petals moving */
+@media (prefers-reduced-motion: reduce) {
+  .finale-decor .falling-petal {
+    display: block !important;
+    animation: blossom-fall 28s linear infinite !important;
+    animation-name: blossom-fall !important;
+    animation-duration: 28s !important;
+    animation-iteration-count: infinite !important;
+    opacity: 0.55 !important;
+  }
+}
+

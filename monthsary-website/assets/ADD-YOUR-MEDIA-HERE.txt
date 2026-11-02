@@ -1,0 +1,7 @@
+ADD YOUR MEDIA HERE
+
+Background music: background-music.mp3
+Voice recording: voice-letter.mp3
+Photos: place them in the photos/ folder.
+
+Background music fades in/out and automatically pauses during the Voice Letter.
