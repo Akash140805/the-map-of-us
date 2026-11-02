@@ -16,7 +16,7 @@ window.siteContent = {
       image: "assets/photos/memory-02.jpg",
       caption: "A little moment, a forever memory",
       title: "The small things are my favorite",
-      text: "Talking about moments, there aren’t just any specific moments to call favourite. Every moment spent with you is special; we tease each other, plan our future, and talk about the problems in our lives. You sharing your old pics and videos- that’s like time stopping for me; I can’t express how happy I am to see you. I forget everything and keep watching you again and again. We have had so many moments to cherish and to know each other; I pray we are always like this, creating these magic moments and caring for each other."
+      text: "Talking about moments, there aren’t just any specific moments to call favourite. Every moment spent with you is special; we tease each other, plan our future, and talk about the problems in our lives. You sharing your pics and videos- that’s like time stopping for me; I can’t express how happy I am to see you. I forget everything and keep watching you again and again. We have had so many moments to cherish and to know each other; I pray we are always like this, creating these magic moments and caring for each other."
     },
     {
       image: "assets/photos/memory-03.jpg",
